@@ -6,17 +6,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class limitsController {
+public class LimitsController {
 
-  private final Configuration configuration;
+    private final Configuration configuration;
 
-  public limitsController(Configuration configuration) {
-    this.configuration = configuration;
-  }
+    public LimitsController(Configuration configuration) {
+        this.configuration = configuration;
+    }
 
-  @GetMapping("/limits")
-  public Limits retrieveLimits() {
+    @GetMapping("/limits")
+    public Limits retrieveLimits() {
 
-    return new Limits(configuration.getMin(), configuration.getMax());
-  }
+        return new Limits(configuration.getMin(), configuration.getMax());
+    }
 }

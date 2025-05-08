@@ -1,32 +1,18 @@
 package com.mohammad.microservices.limits_service.bean;
 
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Limits {
 
-  private int minimum;
-  private int maximum;
+    private int minimum;
+    private int maximum;
 
-  public Limits() {
-  }
-
-  public Limits(int minimum, int maximum) {
-    this.minimum = minimum;
-    this.maximum = maximum;
-  }
-
-  public int getMinimum() {
-    return minimum;
-  }
-
-  public void setMinimum(int minimum) {
-    this.minimum = minimum;
-  }
-
-  public int getMaximum() {
-    return maximum;
-  }
-
-  public void setMaximum(int maximum) {
-    this.maximum = maximum;
-  }
 }
